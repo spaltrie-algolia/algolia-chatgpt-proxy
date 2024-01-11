@@ -4,9 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
+console.error('PORT: ', port);
 
 var app = express();
+app.listen(port, function () {
+   console.log('Example app listening on port ' + port + '!');
+});
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -32,5 +36,7 @@ app.use(function (err, req, res, next) {
    res.status(err.status || 500);
    res.render('error');
 });
+
+
 
 module.exports = app;
