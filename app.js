@@ -4,9 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-const port = process.env.PORT || 8080;
-console.error('PORT: ', port);
-
+const port = process.env.PORT || 3000;
 var app = express();
 
 app.use(logger('dev'));
@@ -35,7 +33,7 @@ app.use(function (err, req, res, next) {
 });
 
 app.listen(port, function () {
-   console.log('Example app listening on port ' + port + '!');
+   console.log('This app listening on port ' + port + '!');
 });
 
 
