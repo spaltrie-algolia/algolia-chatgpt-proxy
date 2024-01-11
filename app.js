@@ -8,9 +8,6 @@ const port = process.env.PORT || 8080;
 console.error('PORT: ', port);
 
 var app = express();
-app.listen(port, function () {
-   console.log('Example app listening on port ' + port + '!');
-});
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -37,6 +34,9 @@ app.use(function (err, req, res, next) {
    res.render('error');
 });
 
+app.listen(port, function () {
+   console.log('Example app listening on port ' + port + '!');
+});
 
 
 module.exports = app;
