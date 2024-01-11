@@ -7,7 +7,6 @@ var dotenv = require('dotenv');
 dotenv.config();
 
 
-/* GET home page. */
 router.post('/', async function (req, res, next) {
 
    const ALGOLIA_APP_ID = req.body.AppId;
